@@ -1,19 +1,23 @@
+package ArrayPairSum;
+
 import java.util.Arrays;
 
 /**
- * 三数之和
- * *给定一个包含 n 个整数的数组 nums，判断 nums 中是否存在三个元素 a，b，c ，使得 a + b + c = 0 ？找出所有满足条件且不重复的三元组。
+ * 数组拆分
+ *
+ * 给定长度为 2n 的数组, 你的任务是将这些数分成 n 对, 例如 (a1, b1), (a2, b2), ..., (an, bn) ，使得从1 到 n 的 min(ai, bi) 总和最大。
  * <p>
- * 注意：答案中不可以包含重复的三元组。
+ * 示例 1:
  * <p>
- * 例如, 给定数组 nums = [-1, 0, 1, 2, -1, -4]，
+ * 输入: [1,4,3,2]
  * <p>
- * 满足要求的三元组集合为：
- * [
- * [-1, 0, 1],
- * [-1, -1, 2]
- * ]
- **/
+ * 输出: 4
+ * 解释: n 等于 2, 最大总和为 4 = min(1, 2) + min(3, 4).
+ * 提示:
+ * <p>
+ * n 是正整数,范围在 [1, 10000].
+ * 数组中的元素范围在 [-10000, 10000].
+ */
 public class SumOfMinMax {
     public int arrayPairSum(int[] nums) {
 
@@ -25,7 +29,7 @@ public class SumOfMinMax {
         //用容器自带的方法，速度提升很大
         Arrays.sort(nums);
 //        nums = QuickSort.QuickSort.quickSort(nums);
-//        nums = SumOfTwoNum.BubbleSort(nums);
+//        nums = SumOfTwoNum.SumOfTwoNum.BubbleSort(nums);
         /*for(int i = 0 ; i < nums.length ; i ++){
             for(int j = i+1 ; j < nums.length; j++ ){
                 if(nums[i] > nums[j]){
