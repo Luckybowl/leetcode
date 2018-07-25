@@ -2,6 +2,10 @@ package CheckInclusion;
 
 import java.util.Arrays;
 
+/**
+ *
+ *  全排序
+ */
 public class Permutation {
     public static void Permutation(char[] str)
     {
