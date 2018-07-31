@@ -1,4 +1,4 @@
-package findDuplicate;
+package Nums.findDuplicate;
 
 import java.util.HashSet;
 import java.util.Set;

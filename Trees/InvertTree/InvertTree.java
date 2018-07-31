@@ -1,6 +1,6 @@
-package BinarySearchTree.InvertTree;
+package Trees.InvertTree;
 
-import BinarySearchTree.TreeNode;
+import Trees.BinarySearchTree.TreeNode;
 
 /**
  *

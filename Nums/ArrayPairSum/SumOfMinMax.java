@@ -1,4 +1,4 @@
-package ArrayPairSum;
+package Nums.ArrayPairSum;
 
 import java.util.Arrays;
 
@@ -29,7 +29,7 @@ public class SumOfMinMax {
         //用容器自带的方法，速度提升很大
         Arrays.sort(nums);
 //        nums = QuickSort.QuickSort.quickSort(nums);
-//        nums = SumOfTwoNum.SumOfTwoNum.BubbleSort(nums);
+//        nums = Nums.SumOfTwoNum.SumOfTwoNum.Nums.SumOfTwoNum.SumOfTwoNum.BubbleSort(nums);
         /*for(int i = 0 ; i < nums.length ; i ++){
             for(int j = i+1 ; j < nums.length; j++ ){
                 if(nums[i] > nums[j]){

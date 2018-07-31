@@ -1,7 +1,4 @@
-package AddTwoNums;
-
-import java.util.ArrayList;
-import java.util.List;
+package Nums.AddTwoNums;
 
 /**
  * 2. 两数相加(中等)

@@ -1,4 +1,4 @@
-package ThreeSum;
+package Nums.ThreeSum;
 
 import java.util.List;
 import java.util.Map;
