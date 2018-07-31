@@ -41,53 +41,42 @@ public class AddTwoNums {
         return dummyHead.next;
     }
 
-    public ListNode getNext(ListNode ls) {
+    public ListNode addTwoNumbers1(ListNode l1, ListNode l2) {
+        ListNode ls = new ListNode(0);
+        count(l1, l2, ls, 0);
         return ls.next;
     }
 
-
     /**
      * 第一次思索，使用递归，结果只能将其存入list中，无法放入ListNode中，故放弃。
+     *
+     * Update:学习了正确解法，每一次将ls变为ls.next，最后返回除了一开始初始化的0，ls.next即可。
      *
      * @param l1
      * @param l2
      * @param ls
      * @param left
      */
-    @Deprecated
     public void count(ListNode l1, ListNode l2, ListNode ls, int left) {
-//        while (getNext(ls) != null) {
-//            ls = ls.next;
-//        }
         if (l1 == null && l2 == null) {
             if (left == 0) {
                 return;
             } else {
-                ls = new ListNode(1);
+                ls.next = new ListNode(1);
                 return;
             }
         }
         if (l1 != null && l2 != null) {
-            if (l1.val + l2.val >= 10) {
-                ls = new ListNode(l1.val + l2.val - 10 + left);
-                left = 1;
+                ls.next = new ListNode((l1.val + l2.val + left) % 10);
+                ls = ls.next;
+                left = (l1.val + l2.val + left) / 10;
                 count(l1.next, l2.next, ls, left);
-            } else {
-                ls = new ListNode(l1.val + l2.val + left);
-                left = 0;
-                count(l1.next, l2.next, ls, left);
-            }
         } else {
-            ListNode temp = null != l1 ? l1 : l2;
-            if (temp.val + left >= 10) {
-                ls = new ListNode(temp.val + left - 10);
-                left = 1;
-                count(l1.next, l2.next, ls, left);
-            } else {
-                ls = new ListNode(temp.val + left);
-                left = 0;
-                count(l1.next, l2.next, ls, left);
-            }
+            ListNode temp = (null != l1) ? l1 : l2;
+                ls.next = new ListNode((temp.val + left) % 10);
+                ls = ls.next;
+                left = (temp.val+ left) / 10;
+                count(temp.next, null, ls, left);
         }
 
     }
@@ -95,13 +84,14 @@ public class AddTwoNums {
 
     public static void main(String[] args) {
         AddTwoNums addTwoNums = new AddTwoNums();
-        ListNode l1 = new ListNode(2);
-        l1.next = new ListNode(4);
-        l1.next.next = new ListNode(3);
-        ListNode l2 = new ListNode(5);
-        l2.next = new ListNode(6);
-        l2.next.next = new ListNode(4);
+        ListNode l1 = new ListNode(1);
+//        l1.next = new ListNode(4);
+//        l1.next.next = new ListNode(3);
+        ListNode l2 = new ListNode(9);
+        l2.next = new ListNode(9);
+//        l2.next.next = new ListNode(4);
         System.out.println(addTwoNums.addTwoNumbers(l1, l2));
+        System.out.println(addTwoNums.addTwoNumbers1(l1, l2));
 
     }
 }
