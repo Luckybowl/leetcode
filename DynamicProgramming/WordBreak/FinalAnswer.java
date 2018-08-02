@@ -1,4 +1,4 @@
-package WordBreak;
+package DynamicProgramming.WordBreak;
 
 import java.util.List;
 
