@@ -28,10 +28,11 @@ public class ThreeSum {
         List<List<Integer>> list = new ArrayList<>();
         Set<List<Integer>> set = new HashSet<>();
         int target = 0;
-        Map<Integer, Integer> map = new HashMap<>();
+        /**这段代码似乎是无用的******************/
+        /*Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
             map.put(nums[i], i);
-        }
+        }*/
         for (int i = 0; i < nums.length; i++) {
             int complement = target - nums[i];
             Map<Integer, Integer> map1 = new HashMap<>();
