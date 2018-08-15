@@ -1,5 +1,7 @@
 package Node.AddTwoNums;
 
+import Node.ListNode;
+
 /**
  * 2. 两数相加(中等)
  * <p>

@@ -1,4 +1,4 @@
-package Node.AddTwoNums;
+package Node;
 
 public class ListNode {
     public int val;

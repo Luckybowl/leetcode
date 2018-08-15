@@ -1,6 +1,6 @@
 package Node.RemoveLastXNode;
 
-import Node.AddTwoNums.ListNode;
+import Node.ListNode;
 
 /**
  * 19. 删除链表的倒数第N个节点(中等)

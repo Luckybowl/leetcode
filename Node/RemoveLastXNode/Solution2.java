@@ -1,6 +1,6 @@
 package Node.RemoveLastXNode;
 
-import Node.AddTwoNums.ListNode;
+import Node.ListNode;
 
 /**
  * 方法二：一次遍历算法

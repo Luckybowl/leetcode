@@ -1,6 +1,6 @@
 package Node.MergeTwoListNodes;
 
-import Node.AddTwoNums.ListNode;
+import Node.ListNode;
 
 import java.util.*;
 
