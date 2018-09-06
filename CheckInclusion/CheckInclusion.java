@@ -80,7 +80,7 @@ public class CheckInclusion {
 
 
     public static void main(String[] args) {
-        String s1 = "abc";
+        String s1 = "abcd";
         String s2 = "altruistic";
         System.out.print(checkInclusion(s1, s2));
     }
