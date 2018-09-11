@@ -1,4 +1,4 @@
-package CheckInclusion;
+package Sort.CheckInclusion;
 
 import java.util.Arrays;
 

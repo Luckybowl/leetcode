@@ -1,4 +1,4 @@
-package GenerateParenthesis.IsParenthesis;
+package Parenthesis.IsParenthesis;
 
 import java.util.HashMap;
 import java.util.Map;

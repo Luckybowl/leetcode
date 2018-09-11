@@ -1,4 +1,4 @@
-package GenerateParenthesis.IsParenthesis;
+package Parenthesis.IsParenthesis;
 
 /**
  * 20. 有效的括号(简单)
@@ -31,7 +31,7 @@ package GenerateParenthesis.IsParenthesis;
  * 输入: "{[]}"
  * 输出: true
  *
- * PS.很遗憾，没有想到用stack来做，似乎没有其他的方法。
+ * PS.很遗憾，这个方法不对，没有想到用stack来做，似乎没有其他的方法。
  */
 public class IsParenthesis {
     @Deprecated
