@@ -70,6 +70,7 @@ public class SearchRange {
                 searchTarget(set, start, mid - 1, target, nums);
             }
         } else if (target == nums[mid]) {
+            /**TODO 此处还可以优化，直接得到目标数组[x,y]*************************/
             for (int i = mid; i <= end; i++) {
                 if (target != nums[i]) {
                     break;
