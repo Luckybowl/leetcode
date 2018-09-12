@@ -19,7 +19,7 @@ import java.util.*;
  */
 public class LongestValidParentheses {
     public int longestValidParentheses(String s) {
-        int sum = 0;
+        int max = 0;
         Map<Character, Character> map = new HashMap<>();
         Map<Integer, Integer> map1 = new HashMap<>();
         map.put('(', ')');
@@ -27,29 +27,45 @@ public class LongestValidParentheses {
         Stack<Integer> stack = new Stack<>();
         for (int i = 0; i < s.length(); i++) {
             if (map.containsKey(s.charAt(i))) {
-                stack.push(i);
+                stack.push(0);
             } else if (stack.isEmpty()) {
-                sum = 0;
                 continue;
             } else {
-                if (s.charAt(i) == map.get('(')) {
-                    sum += 2;
-                    int j = stack.peek();
-                    if (map1.get(j - 2) == null) {
-                        sum = 2;
+                if (stack.size() == 1) {
+                    if (stack.pop() == 0) {
+                        stack.push(2);
+                        max = Math.max(max, 2);
                     }
-                    map1.put(stack.pop(), sum);
-                    sum = Math.max(sum,)
                 } else {
-                    sum = 0;
+                    if (stack.peek() == 0) {
+                        stack.pop();
+                        int num = 2;
+                        if (stack.peek() != 0) {
+                            num += stack.pop();
+                        }
+                        stack.push(num);
+                        max = Math.max(num, max);
+                    } else {
+                        /**如果是数字，由于当前的栈大小大于等于2，
+                         * 则下一个栈的元素一定是“（”，弹出后压入合并后的序列长度，
+                         * 压之前再检查，如果栈顶元素还是为数字，则再合并，再压入。***************/
+                        int temp = stack.pop();
+                        stack.pop();
+                        temp += 2;
+                        if(!stack.isEmpty() && stack.peek() != 0){
+                            temp += stack.pop();
+                        }
+                        max = Math.max(temp,max);
+                        stack.push(temp);
+                    }
                 }
             }
         }
-        return sum;
+        return max;
     }
 
     public static void main(String[] args) {
-        String s = ")()())";
+        String s = "(())))()()()";
         LongestValidParentheses lp = new LongestValidParentheses();
         System.out.println(lp.longestValidParentheses(s));
     }
