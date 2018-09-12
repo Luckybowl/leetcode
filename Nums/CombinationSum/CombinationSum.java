@@ -51,6 +51,7 @@ public class CombinationSum {
         if (remain < 0) {
             return;
         } else if (remain == 0) {
+            /**此处得要新建一个数组，否则之后对数组的修改会影响存进去的结果**/
             list.add(new ArrayList<>(tempList));
         } else {
             for (int i = start; i < candidates.length; i++) {
