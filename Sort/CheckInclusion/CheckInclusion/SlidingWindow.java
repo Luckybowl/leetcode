@@ -1,4 +1,4 @@
-package CheckInclusion;
+package Sort.CheckInclusion.CheckInclusion;
 
 /**
  * 判断一个字符串A的permutation是否在另一个字符串B中，即判断字符串A中的所有字符是否在字符B中被连续使用完。
