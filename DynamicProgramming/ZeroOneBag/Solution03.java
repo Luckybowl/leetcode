@@ -1,5 +1,7 @@
 package DynamicProgramming.ZeroOneBag;
 
+import Nums.FirstMissingPositive.Solution;
+
 /**
  * 修改为递推
  */
@@ -33,7 +35,7 @@ public class Solution03 {
         return result[N][W];
     }
 
-    public static void main(String[] agrs) {
+    public static void main(String[] agrs) throws ClassNotFoundException, IllegalAccessException, InstantiationException {
         System.out.println(search(0, 0));
     }
 }

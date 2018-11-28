@@ -31,6 +31,7 @@ public class Solution01 {
 
         //选与不选都会跳过index;
         //一个search中有两个search，要解决第一个search的时间复杂度，一定是后一个时间复杂度的两倍
+        //S代表当前袋子里东西的重量,一开始以为是价值。。
         return Math.max(search(index + 1, S + w[index]) + v[index], search(index + 1, S));
     }
 
